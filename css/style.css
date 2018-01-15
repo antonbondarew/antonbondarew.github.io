@@ -203,6 +203,7 @@ a.navbar-brand.page-scroll {
 #intro .intro-body .brand-heading {
 	color: #E75926;
 	text-shadow: 0 4px #a13e1a;
+	text-transform: initial;
 }
 #intro .intro-body .intro-text {
 	font-size: 18px;
@@ -250,7 +251,7 @@ a.navbar-brand.page-scroll {
 
 /* About Section */
 #about {
-	padding: 140px 0;
+	padding: 70px 0;
 	background: #f6f6f6;
 }
 #about .about-text {
@@ -297,8 +298,8 @@ a.navbar-brand.page-scroll {
 
 /* Services */
 section#services {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 section h2.section-heading {
   font-size: 40px;
@@ -455,7 +456,7 @@ section h3.section-subheading {
 
 /* Team Section */
 #team {
-	padding: 140px 0;
+	padding: 70px 0;
 	background: #e6e6e6;
 }
 img.img-thumbnail.team-img {
@@ -484,7 +485,7 @@ p.founder-description {
 	background-size: cover;
 	background-attachment: fixed;
 	color: #ddd;
-	padding: 140px 0;
+	padding: 70px 0;
 }
 #news h2 {
 	color: #f6f6f6;
@@ -644,6 +645,16 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 /* German Language */
 
-.language-german-flag {
+.german-language-emoticon {
 	font-size: 32px;
+}
+
+a.page-scroll.german-language-windows{
+		display: none;
+    padding-top: 0;
+    margin-top: 11px;
+}
+img.img-responsive.german-flag-windows {
+    width: 30px;
+    height: 30px;
 }
