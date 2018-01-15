@@ -649,13 +649,12 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-size: 32px;
 }
 
-a.page-scroll.german-language-windows{
+.german-language-windows{
 		display: none;
     padding-top: 0;
-    margin-top: 11px;
 }
-img.img-responsive.german-flag-windows-image {
-		
+.german-flag-windows-image {
     width: 30px;
     height: 30px;
+		margin-top: 11px;
 }
