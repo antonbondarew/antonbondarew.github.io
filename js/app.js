@@ -32,7 +32,6 @@ function main() {
   if (OSName==='Windows') {
     $('.german-language-emoticon').css('display','none')
     $('.german-language-windows').css('display','initial')
-    $('.german-language-windows').css('padding','0')
   }
 
 
