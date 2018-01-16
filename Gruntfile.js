@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['css', 'js', 'de/index.html', 'form-success/index.html', 'index.html']
+        src: ['css', 'js', 'de/index.html', 'de/form-submit/index.html', 'form-success/index.html', 'index.html']
       }
     },
 
@@ -55,9 +55,35 @@ module.exports = function(grunt) {
           files: {                                   // Dictionary of files
             'index.html': 'index-src.html',    // 'destination': 'source'
             'de/index.html': 'de/index-src.html',
-            'form-success/index.html': 'form-success/index-src.html'
+            'form-success/index.html': 'form-success/index-src.html',
+            'de/form-success/index.html': 'de/form-success/index-src.html'
           }
         }
+      },
+
+      // grunt watch plugin
+      watch: {
+          scripts: {
+              files: ['src/js/*.js'],
+              tasks: ['uglify'],
+              options: {
+                  spawn: false,
+              },
+          },
+          stylesheets: {
+              files: ['src/css/*.css'],
+              tasks: ['cssmin'],
+              options: {
+                  spawn: false,
+              },
+          },
+          markup: {
+              files: ['index-src.html', 'de/index-src.html', 'form-success/index-src.html', 'de/form-success/index-src.html'],
+              tasks: ['htmlmin'],
+              options: {
+                  spawn: false,
+              },
+          }
       }
 
   });
@@ -68,6 +94,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.registerTask('default', ['clean', 'mkdir', 'cssmin', 'uglify', 'htmlmin']);
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default', ['clean', 'mkdir', 'cssmin', 'uglify', 'htmlmin', 'watch']);
 
 };
