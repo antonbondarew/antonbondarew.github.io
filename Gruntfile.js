@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['dist/css', 'dist/js', 'dist/de', 'form-success', 'dist/index.html']
+        src: ['css', 'js', 'de/index.html', 'form-success/index.html', 'index.html']
       }
     },
 
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['dist/css', 'dist/js', 'dist/de', 'dist/form-success']
+          create: ['css', 'js']
         }
       }
     },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'dist/css/',
+          dest: 'css/',
           ext: '.min.css'
         }]
       }
@@ -40,8 +40,8 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'dist/js/app.min.js': ['src/js/app.js'],
-          'dist/js/bootstrap.min.js': ['src/js/bootstrap.min.js']
+          'js/app.min.js': ['src/js/app.js'],
+          'js/bootstrap.min.js': ['src/js/bootstrap.min.js']
         }
       }
     },
@@ -53,9 +53,9 @@ module.exports = function(grunt) {
             collapseWhitespace: true
           },
           files: {                                   // Dictionary of files
-            'dist/index.html': 'src/index-src.html',    // 'destination': 'source'
-            'dist/de/index.html': 'src/de/index.html',
-            'dist/form-success/index.html': 'src/form-success/index.html'
+            'index.html': 'index-src.html',    // 'destination': 'source'
+            'de/index.html': 'de/index-src.html',
+            'form-success/index.html': 'form-success/index-src.html'
           }
         }
       }
