@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['css', 'js', 'de/index.html', 'de/form-submit/index.html', 'form-success/index.html', 'index.html']
+        src: ['css', 'js', 'de/css', 'de/js', 'de/index.html', 'de/form-submit/index.html', 'form-success/index.html', 'index.html']
       }
     },
 
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['css', 'js']
+          create: ['css', 'js', 'de/css', 'de/js']
         }
       }
     },
@@ -29,7 +29,15 @@ module.exports = function(grunt) {
           src: ['*.css', '!*.min.css'],
           dest: 'css/',
           ext: '.min.css'
-        }]
+        },
+        {
+          expand: true,
+          cwd: 'src/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'de/css/',
+          ext: '.min.css'
+        }
+      ]
       }
     },
 
@@ -41,7 +49,9 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           'js/app.min.js': ['src/js/app.js'],
-          'js/bootstrap.min.js': ['src/js/bootstrap.min.js']
+          'js/bootstrap.min.js': ['src/js/bootstrap.min.js'],
+          'de/js/app.min.js': ['src/js/app.js'],
+          'de/js/bootstrap.min.js': ['src/js/bootstrap.min.js']
         }
       }
     },
