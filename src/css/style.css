@@ -247,6 +247,7 @@ a.navbar-brand.page-scroll {
 }
 .section-title h2, .section-title.center h2 {
 	margin-bottom: 30px;
+	line-height: normal;
 }
 
 /* About Section */
@@ -490,6 +491,7 @@ p.founder-description {
 }
 #news h2 {
 	color: #f6f6f6;
+	line-height: normal;
 }
 #news blockquote {
 	position: relative;
