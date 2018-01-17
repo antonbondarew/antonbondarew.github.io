@@ -36,3 +36,13 @@
         display:block !important;
     }
 }
+
+
+
+#about .about-text {
+    text-align: initial;
+}
+
+p.founder-description {
+    text-align: center;
+}
