@@ -364,11 +364,12 @@ section h3.section-subheading {
       color: white;
       border: 7px solid #e9ecef;
       border-radius: 100%;
-      background-color: #fed136; }
+      background-color: #cf4f23; }
       .timeline > li .timeline-image h4 {
         font-size: 10px;
         line-height: 14px;
-        margin-top: 12px; }
+        margin-top: 12px;
+			color: #ffffff}
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
       padding: 0 20px 0 100px;
