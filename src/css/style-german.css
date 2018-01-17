@@ -53,3 +53,13 @@ p.founder-description {
   text-decoration: underline;
   text-transform: uppercase;
 }
+
+.impressum-heading-modal {
+  color: #cf4f23;
+  font-size: 16px;
+  line-height: 2em;
+}
+.impressum-text-modal {
+  font-size: 14px;
+  color: #555;
+}
