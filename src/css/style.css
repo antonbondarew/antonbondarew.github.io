@@ -1,6 +1,7 @@
 
 :root {
   --theme-color: #CC9900;
+  --link-highlight: #a13e1a;
 }
 body {
 	/* font-size: 16px; */
@@ -206,7 +207,7 @@ a.navbar-brand.page-scroll {
 }
 #intro .intro-body .brand-heading {
 	color: var(--theme-color);;
-	/* text-shadow: 0 4px #a13e1a; */
+	/* text-shadow: 0 4px var(--link-highlight); */
 	text-transform: initial;
 }
 #intro .intro-body .intro-text {
@@ -244,7 +245,7 @@ a.navbar-brand.page-scroll {
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
 	color: #f6f6f6;
-	background-color: #a13e1a;
+	background-color: var(--link-highlight);
 }
 .section-title.center {
 	padding: 30px 0;
@@ -482,8 +483,21 @@ img.img-thumbnail.team-img {
 }
 p.founder-description {
     text-align: justify;
+    margin-bottom: 1em;
 }
 
+#founder-intro-linkedin{
+  font-size: 18px;
+  padding: 4px 14px;
+  color: var(--theme-color);
+  border-radius: 4px;
+  transition: all .3s;
+  box-shadow: 1px 1px 1px 0px #cc9901;
+}
+
+#founder-intro-linkedin:hover {
+  color: var(--link-highlight);
+}
 
 /* News Section */
 #news {
@@ -599,7 +613,7 @@ label {
 }
 #contact .btn-default:hover, #contact .btn-default:focus {
 	color: #f6f6f6;
-	background: #a13e1a;
+	background: var(--link-highlight);
 }
 .btn:active, .btn.active {
 	background-image: none;
@@ -626,7 +640,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	transition: all 0.3s;
 }
 #contact .social i.fa:hover {
-	color: #a13e1a;
+	color: var(--link-highlight);
 }
 
 
